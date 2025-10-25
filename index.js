@@ -1,7 +1,8 @@
-const { faker } = require('@faker-js/faker'); // Required Faker
-const mysql = require('mysql2'); // Required MySQL
+const { faker } = require('@faker-js/faker'); // REQUIRED FAKER 
+const mysql = require('mysql2'); // REQUIRED MYSQL
 
-// forming connection with database
+
+// FORMING CONNECTION WITH DATABASE
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -9,7 +10,10 @@ const connection = mysql.createConnection({
     password: 'admin123',
 });
 
-// method to run query of database in node
+
+
+
+// METHOD TO RUN QUERY OF DATABASE IN NODE
 
 let Q = "SHOW DATABASES";
 try {
@@ -24,9 +28,13 @@ try {
     console.log(err)
 }
 
-connection.end() // to stop the connection
 
-// Pre Written Code 🚀
+
+connection.end() // TO STOP THE CONNECTION
+
+
+
+// PRE WRITTEN CODE 🚀
 let getRandomeUser = () => {
     return {
         userId: faker.string.uuid(),
@@ -36,6 +44,5 @@ let getRandomeUser = () => {
     };
 }
 
-// console.log(getRandomeUser());
 
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p>You are About to Edit This USer : <%= USER.email %></p>
+    <p>You are About to Edit This USer : <%= USER.id %></p>
+
+    <!-- USING METHOD OVERRIDE :) -->
+    <form action="/user/<%=USER.id%>?_method=PATCH" method="POST">
+        <textarea><%= USER.username %></textarea>
+        <input type="password" name="password" placeholder="Enter Password">
+        <button>Edit : )</button>
+    </form>
+</body>
+</html>
